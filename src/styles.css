@@ -1,0 +1,15 @@
+/* Add application styles & imports to this file! */
+
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css');
+.form-group {
+    margin-bottom: 0;
+}
+ul {
+    padding: 0;
+    margin: 0;
+    overflow-y: scroll;
+    max-height: 200px;
+}
+ul li {
+  cursor: pointer
+}
