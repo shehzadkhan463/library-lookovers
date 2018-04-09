@@ -1,3 +1,19 @@
-<p>
-  multi-select-dropdown works!
-</p>
+<div class="container" [formGroup]="formGroup">
+	<div class="form-group">
+		<label for="exampleInputEmail1">Email address</label>
+		<input id="item" type="text" formControlName="query" (keyup)="filter()" class="form-control" placeholder="Search">
+	</div>
+	<div *ngIf="filteredList.length > 0">
+		<ul>
+			<li *ngFor="let item of filteredList" class="list-group-item list-group-item-action list-group-item-light d-flex justify-content-between align-items-center"
+			 (click)="select(item, $event)">
+				{{item.name}}
+				<div class="input-group-append">
+					<div class="input-group-text">
+						<input type="checkbox">
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>

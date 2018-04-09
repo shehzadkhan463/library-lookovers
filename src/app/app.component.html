@@ -2,22 +2,16 @@
 <p>
 	Start editing to see some magic happen :)
 </p>
-<div class="container" [formGroup]="formGroup">
-	<div class="form-group">
-		<label for="exampleInputEmail1">Email address</label>
-		<input id="item" type="text" formControlName="query" (keyup)="filter()" class="form-control" placeholder="Search">
-	</div>
-	<div *ngIf="filteredList.length > 0">
-		<ul>
-			<li *ngFor="let item of filteredList" class="list-group-item list-group-item-action list-group-item-light d-flex justify-content-between align-items-center"
-			 (click)="select(item, $event)">
-				{{item}}
-				<div class="input-group-append">
-					<div class="input-group-text">
-						<input type="checkbox" #check>
-					</div>
-				</div>
-			</li>
-		</ul>
-	</div>
-</div>
+<app-multi-select-dropdown  [items]="items" (keyup)="onKeyPress($event)"></app-multi-select-dropdown>
+
+<table>
+	<tr>
+		<th>ID</th>
+		<th>name</th>
+	</tr>
+	<button (click)="downloadFile(items)">Export</button>
+	<tr *ngFor="let item of items">
+		<td>{{ item.id }}</td>
+		<td>{{ item.name }}</td>
+	</tr>
+</table>
