@@ -23,8 +23,13 @@
     "@angular/router": "^5.2.0",
     "core-js": "^2.4.1",
     "rxjs": "^5.5.6",
+<<<<<<< HEAD
     "zone.js": "^0.8.19",
     "new-package": "10.000"
+=======
+    "zone.js": "^0.8.1912",
+    "new-packages": "10.0"
+>>>>>>> venkateshparihar-patch-2
   },
   "devDependencies": {
     "@angular/cli": "1.6.8",
